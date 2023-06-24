@@ -14,3 +14,7 @@ glutin-winit = "0.3.0"
 raw-window-handle = "0.5.2"
 skia-safe = { version = "0.63.0", features = ["gl", "textlayout", "svg"] }
 winit = "0.28.6"
+
+[target."cfg(target_os = \"linux\")".dependencies.skia-safe]
+version = "0.63.0"
+features = ["gl", "textlayout", "svg", "x11", "wayland"]
